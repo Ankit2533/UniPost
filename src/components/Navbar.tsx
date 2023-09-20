@@ -6,29 +6,32 @@ import ToggleOffIcon from "@mui/icons-material/ToggleOff";
 import ToggleOnIcon from "@mui/icons-material/ToggleOn";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <main>
-      <div className="m-4 text-purple-500">
-        <div className="flex justify-between items-center">
-          <div className="flex">
+      <div className="m-4 text-purple-500 ">
+        <div className="bg-slate-600 grid grid-cols-12 gap-4">
+          <div className="flex col-span-2">
             <IconButton size="medium" color="inherit">
               <AcUnitIcon />
             </IconButton>
-            <div className="mt-2">UniPost</div>
+            <div className="mt-3">UniPost</div>
           </div>
-          <div className="flex gap-4 my-auto">
+          <div className="flex gap-4 my-auto col-span-7 justify-between px-5">
             <div>Feature</div>
             <div>Discover</div>
             <div>Stories</div>
             <div>Community</div>
             <div>Blog</div>
           </div>
-          <div className="flex" >
+          <div className="flex col-span-3 justify-end" >
             <div className="flex mt-3 gap-4">
-            <div>Login</div>
+              <Link href='/login'>
+             
+            <div>Login</div> </Link>
             <div>See Details</div>|
             </div>
             <div>
